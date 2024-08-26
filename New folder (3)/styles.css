@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    animation: backgroundFade 10s ease infinite;
+}
+
+@keyframes backgroundFade {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    font-size: 3em;
+    color: #e84b27;
+    background: linear-gradient(45deg, #ff3f3f, #ffde7d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.campaign-image {
+    margin: 20px 0;
+    perspective: 1000px;
+}
+
+.campaign-image img {
+    width: 100%;
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.6s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.campaign-image img:hover {
+    transform: rotateY(20deg) scale(1.1);
+}
+
+.countdown {
+    font-size: 2em;
+    color: #ff5733;
+    margin: 20px 0;
+}
+
+.statements p {
+    font-size: 1.8em;
+    color: #555;
+    margin: 15px 0;
+    animation: fadeIn 2s ease both;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.vote-button {
+    background-color: #ff5733;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vote-button:hover {
+    background-color: #ff704d;
+    transform: scale(1.1);
+}
+
+.vote-button:active {
+    background-color: #e94e3e;
+    transform: scale(0.95);
+}
+
+body.custom-background {
+    background: url('custom-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
